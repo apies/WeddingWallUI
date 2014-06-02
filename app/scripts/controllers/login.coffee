@@ -1,7 +1,5 @@
-'use strict'
-
 angular.module('weddingWallApp')
-  .controller 'WeddingWallCtrl', ($scope) ->
+  .controller 'LoginCtrl', ($scope, $rootScope, User) ->
     $scope.awesomeThings = [
       'HTML5 Boilerplate'
       'AngularJS'
