@@ -2,6 +2,7 @@
   "name": "weddingwall",
   "version": "0.0.1",
   "dependencies": {
+    "karma-phantomjs-launcher": "^0.1.4"
   },
   "devDependencies": {
     "grunt": "~0.4.1",

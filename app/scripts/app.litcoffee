@@ -22,7 +22,7 @@ and templates
           .when '/wedding_wall',
             templateUrl: 'views/wedding_wall.html'
             controller: 'WeddingWallCtrl'
-          .when '/login/:user_id',
+          .when '/login/:userId',
             template: ''
             controller: 'LoginCtrl'
           .otherwise

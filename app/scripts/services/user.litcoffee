@@ -7,7 +7,7 @@ refactoring to do in terms of making the code more DRY.
 
     angular.module('weddingWallApp:services')
      .factory 'UserBase',($resource) ->
-       $resource('/api/posts/:id', {id: "@id"}, {update: {method: "PUT"}})
+       $resource('/api/users/:id', {id: "@id"}, {update: {method: "PUT"}})
 
 ## User *explained in post.coffee*
 
