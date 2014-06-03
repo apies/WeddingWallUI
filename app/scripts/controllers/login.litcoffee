@@ -9,6 +9,8 @@ secure because the backend enforces the bulk of the security.
 
     angular.module('weddingWallApp').controller 'LoginCtrl', ($scope, $rootScope, User, $routeParams) ->
 
+### Controller setup
+
 first we get the userId from the url paramater, a user with an 
 id of 123 would login at *login/123*. This is not completely secure as you
 can impersonate a user just by typing in their userId. However, we expect the
@@ -18,18 +20,9 @@ retreiving any real user data.
       id = $routeParams.userId
 
 now we use the userId to retreive user info. Note that we use pattern matching
-for style points
+for style points, *{id} = {id:id}*.
 
-      # currentUser = User.get({id}) if id
-      $rootScope.currentUser = {}
-
-      User.get {id}, (user, z) ->
-        console.log(user)
-        $rootScope.currentUser = user
-
+      currentUser = User.get({id}) if id
+      $rootScope.currentUser = currentUser
 
     
-      # User.get({id}).then( (user) ->
-      #   # console.log(user)
-      #   $rootScope.currentUser = user
-      # )
