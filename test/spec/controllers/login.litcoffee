@@ -29,14 +29,10 @@ hook dependencies into controller being tested
         $routeParams = _$routeParams_
         User = _User_
         
-
-
-
         $routeParams.userId = 12345
         $httpBackend.whenGET('/api/users/12345').respond(user12345)
         scope = $rootScope.$new()
 
-        
         user12345 = 
           _id: 12345
           username: 'Alan Pies'
@@ -44,10 +40,7 @@ hook dependencies into controller being tested
         LoginCtrl = $controller 'LoginCtrl', {
           $scope: scope
         }
-        # 
-
-
-
+    
         $httpBackend.flush()
 
 I cannot get the stupid promises to resolve in order to test the controller. this
