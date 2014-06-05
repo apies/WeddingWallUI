@@ -12,6 +12,7 @@ and templates
         'ngResource',
         'ngSanitize',
         'ngRoute',
+        'btford.socket-io',
         'weddingWallApp:services'
       ])
       .config ($routeProvider) ->
@@ -27,4 +28,6 @@ and templates
             controller: 'LoginCtrl'
           .otherwise
             redirectTo: '/'
+      .factory 'socket', (socketFactory) ->
+        socketFactory()
 

@@ -19,7 +19,7 @@ to limit the query to latest records
 post it to the posts json api service
 
 
-    WeddingWallController = ($scope, Post) ->
+    WeddingWallController = ($scope, Post, socket) ->
         $scope.posts = Post.query()
         $scope.newPost = new Post(content: 'comming soon')
 
@@ -28,8 +28,8 @@ post it to the posts json api service
 
 
 ##Angular Controller interface
-To the angular controller interface we pass an anonymous function.
-The arguments to the anonymous function are the controllers dependencies.
+To the angular controller interface we pass a function.
+The arguments to the function are the controllers dependencies.
 In this case our controller depends on the Post service to handle CRUD
 operations for post objects, and the $scope service which provides access
 to the controllers context.
